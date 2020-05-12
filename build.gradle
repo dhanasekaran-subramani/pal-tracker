@@ -1,5 +1,12 @@
 import org.flywaydb.gradle.task.FlywayMigrateTask
 
+// Following required to run flyway 5.2.1 plugin
+buildscript {
+    dependencies {
+        classpath 'mysql:mysql-connector-java:8.0.13'
+    }
+}
+
 plugins {
     id 'org.springframework.boot' version '2.2.2.RELEASE'
     id 'io.spring.dependency-management' version '1.0.8.RELEASE'
